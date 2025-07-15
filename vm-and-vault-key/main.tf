@@ -56,7 +56,6 @@ resource "azurerm_network_security_rule" "mtc-dev-nsg-rule" {
   protocol                    = "Tcp"
   source_port_range           = "*"
   destination_port_range      = "*"
-  source_address_prefix       = "104.157.31.51/32"
   source_address_prefix = var.allowed_ip
   destination_address_prefix  = "*"
   resource_group_name         = azurerm_resource_group.mtc-rg.name
